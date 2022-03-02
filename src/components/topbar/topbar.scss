@@ -1,0 +1,8 @@
+.topbar {
+  background-color: lightblue;
+  width: 100%;
+  height: var(--height-topbar);
+  position: fixed;
+  top: 0;
+  z-index: var(--zindex-topbar);
+}
