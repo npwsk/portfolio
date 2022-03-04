@@ -1,0 +1,34 @@
+@use "scss/scss-variables" as *;
+
+.logo {
+  &__link {
+    position: relative;
+    color: currentcolor;
+    font-weight: 700;
+    font-size: 28px;
+    text-decoration: none;
+
+    &::after {
+      position: absolute;
+      bottom: -6px;
+      left: 12px;
+      z-index: -1;
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
+      content: "";
+      background-color: var(--color-accent);
+      border-radius: 51% 49% 40% 60% / 52% 45% 55% 48%;
+      opacity: 0.4;
+      transition: 0.35s cubic-bezier(0.3, -0.25, 0.36, 1.87);
+    }
+
+    &:hover::after {
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 41% 59% 48% 52% / 74% 45% 55% 26%;
+      opacity: 0.6;
+    }
+  }
+}

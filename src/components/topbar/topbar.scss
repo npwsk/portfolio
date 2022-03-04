@@ -1,8 +1,24 @@
+@use "scss/scss-variables" as *;
+
 .topbar {
-  background-color: lightblue;
-  width: 100%;
-  height: var(--height-topbar);
   position: fixed;
   top: 0;
-  z-index: var(--zindex-topbar);
+  z-index: $zindex-topbar;
+  width: 100%;
+  height: var(--height-topbar);
+  background-color: var(--color-bg-main);
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--width-wrapper);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 var(--paddinginline-wrapper);
+  }
+
+  &__logo {
+    color: var(--color-main);
+  }
 }

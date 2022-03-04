@@ -1,0 +1,17 @@
+:root {
+  // colors
+  --color-main: hsl(230deg 38% 9%);
+  --color-secondary: hsl(192deg 3% 67%);
+  --color-accent: hsl(46deg 96% 70%);
+  --color-bg-main: hsl(0deg 0% 100%);
+  --color-bg-secondary: hsl(230deg 39% 9%);
+
+  // sizes
+  --width-wrapper: 1440px;
+  --height-topbar: 70px;
+
+  // spaces
+  --paddingblock-wrapper: 20px;
+  --paddinginline-wrapper: 20px;
+  --gap-contactlist: 20px;
+}

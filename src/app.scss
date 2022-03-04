@@ -1,19 +1,22 @@
-@use "css-variables" as *;
+@use "scss/css-variables";
+@use "scss/general";
 
 .app {
   height: 100vh;
 }
 
 .sections {
-  width: 100%;
-  height: calc(100vh - var(--height-topbar));
-  background-color: lightsalmon;
   position: relative;
   top: var(--height-topbar);
-  overflow-y: scroll;
+  width: 100%;
+  height: calc(100vh - var(--height-topbar));
   overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: lightsalmon;
+  scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   scrollbar-width: none;
+
   &::-webkit-scrollbar {
     display: none;
   }

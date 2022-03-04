@@ -40,6 +40,10 @@
     "eslint": "^8.10.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.29.2"
+    "eslint-plugin-react": "^7.29.2",
+    "stylelint": "^14.5.3",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-rational-order-plugin": "^1.0.2",
+    "stylelint-selector-bem-pattern": "^2.1.1"
   }
 }

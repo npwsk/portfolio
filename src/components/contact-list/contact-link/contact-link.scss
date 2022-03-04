@@ -1,0 +1,20 @@
+.contact-link {
+  &__icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-secondary);
+
+    &.email {
+      mask-image: url("/assets/svg/message.svg");
+    }
+
+    &.github {
+      mask-image: url("/assets/svg/github.svg");
+    }
+
+    &.telegram {
+      mask-image: url("/assets/svg/telegram.svg");
+    }
+  }
+}
