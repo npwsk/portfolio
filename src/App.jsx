@@ -3,7 +3,8 @@ import Intro from './components/intro/Intro';
 import Projects from './components/projects/Projects';
 import Experience from './components/experience/Experience';
 import Contact from './components/contact/Contact';
-import './app.scss'
+import './app.scss';
+
 
 const App = () => {
   return (
