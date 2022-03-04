@@ -1,5 +1,29 @@
 const en = {
   translation: {
+    nav: {
+      sections: [
+        {
+          title: 'Intro',
+          href: '#intro',
+        },
+        {
+          title: 'Projects',
+          href: '#projects',
+        },
+        {
+          title: 'Experience',
+          href: '#experience',
+        },
+        {
+          title: 'Education',
+          href: '#education',
+        },
+        {
+          title: 'Contact',
+          href: '#contact',
+        },
+      ],
+    },
     contacts: [
       {
         title: 'email',

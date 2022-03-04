@@ -1,10 +1,10 @@
 import Topbar from './components/topbar/Topbar';
-import Intro from './components/intro/Intro';
-import Projects from './components/projects/Projects';
-import Experience from './components/experience/Experience';
-import Contact from './components/contact/Contact';
+import Intro from './components/sections/intro/Intro';
+import Projects from './components/sections/projects/Projects';
+import Experience from './components/sections/experience/Experience';
+import Education from './components/sections/education/Education';
+import Contact from './components/sections/contact/Contact';
 import './app.scss';
-
 
 const App = () => {
   return (
@@ -14,6 +14,7 @@ const App = () => {
         <Intro />
         <Projects />
         <Experience />
+        <Education />
         <Contact />
       </main>
     </div>
