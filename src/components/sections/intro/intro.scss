@@ -1,3 +1,28 @@
 .intro {
-  background-color: lightgreen;
+  position: relative;
+  background-color: var(--color-bg-main);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-left: 60px;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 1;
+  }
+
+  &__greeting {
+    margin: 0;
+  }
+
+  &__name {
+    margin: 10px 0;
+    font-size: 60px;
+  }
+
+  &__job-title {
+    margin: 0;
+  }
 }

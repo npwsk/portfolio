@@ -11,7 +11,7 @@ const App = () => {
     <div className="app">
       <Topbar />
       <main className="sections">
-        <Intro />
+        <Intro nextLink="#projects" />
         <Projects />
         <Experience />
         <Education />

@@ -1,0 +1,51 @@
+.scroll-link {
+  position: relative;
+  display: block;
+  padding-top: 70px;
+  color: var(--color-main);
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-left: -12px;
+    border-bottom: 1px solid var(--color-main);
+    border-left: 1px solid var(--color-main);
+    transform: rotate(-45deg);
+    animation: scroll-arrow 1.5s infinite;
+  }
+}
+
+.section__scroll-link {
+  position: absolute;
+  bottom: var(--bottom-scroll-link);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes scroll-arrow {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}

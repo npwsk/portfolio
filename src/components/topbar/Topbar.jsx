@@ -1,20 +1,23 @@
-import Logo from '../logo/Logo';
+import Logo from 'components/logo/Logo';
 import ContactList from '../contact-list/ContactList';
-import './topbar.scss';
 import Nav from '../nav/Nav';
+import Wrapper from '../wrapper/Wrapper';
+import './topbar.scss';
 
 const Topbar = () => {
   return (
     <header className="topbar">
-      <div className="topbar__wrapper">
-        <div className="topbar__logo">
-          <Logo />
+      <Wrapper>
+        <div className="topbar__wrapper">
+          <div className="topbar__logo">
+            <Logo />
+          </div>
+
+          <Nav />
+
+          <ContactList />
         </div>
-
-        <Nav />
-
-        <ContactList />
-      </div>
+      </Wrapper>
     </header>
   );
 };

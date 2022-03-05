@@ -3,10 +3,6 @@ const en = {
     nav: {
       sections: [
         {
-          title: 'Intro',
-          href: '#intro',
-        },
-        {
           title: 'Projects',
           href: '#projects',
         },
@@ -19,7 +15,7 @@ const en = {
           href: '#education',
         },
         {
-          title: 'Contact',
+          title: 'Contact me',
           href: '#contact',
         },
       ],
