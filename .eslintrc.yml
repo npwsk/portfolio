@@ -13,6 +13,20 @@ parserOptions:
 plugins:
   - react
   - prettier
+settings:
+  import/resolver:
+    alias:
+      map:
+        - - '@'
+          - ./src
+      extensions:
+        - .js
+        - .jsx
+        - .json
 rules:
   react/react-in-jsx-scope: off
   prettier/prettier: error
+  no-restricted-exports:
+    - error
+    - restrictedNamedExports:
+        - then
