@@ -9,7 +9,9 @@ const Home = () => {
     <Wrapper>
       <p>{t('about.hello')}</p>
       <p>{t('about.intro')}</p>
-      <button type="button">Download CV</button>
+      <a href="./cv.pdf" download="nika-perfilova-cv">
+        {t('about.download')}
+      </a>
     </Wrapper>
   );
 };

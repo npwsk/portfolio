@@ -6,7 +6,7 @@ import Overlay from '@/components/Overlay';
 import Logo from '@/components/Logo';
 import Menu from '@/components/Menu';
 import MobileMenu from '@/components/MobileMenu';
-import BurgerButton from '@/components/BurgerButton';
+import BurgerButton from '@/components/Buttons/BurgerButton';
 import { navItems } from '@/constants';
 import classes from './styles.module.scss';
 
