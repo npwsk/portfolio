@@ -1,18 +1,18 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from '@/App';
 import About from '@/pages/About';
 import Experience from '@/pages/Experience';
 import Projects from '@/pages/Projects';
 import Contacts from '@/pages/Contacts';
 import NotFound from '@/pages/NotFound';
 import Project from '@/components/Project';
+import Layout from '@/components/Layout/component';
 
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}>
+        <Route path="/" element={<Layout />}>
           <Route path="about" element={<About />} />
           <Route path="projects" element={<Projects />}>
             <Route path=":projectId" element={<Project />} />

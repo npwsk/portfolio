@@ -1,5 +1,5 @@
 import React from 'react';
-import { getProjects } from '@/content/projects';
+import { getProjects } from '@/content';
 import { NavLink, Outlet } from 'react-router-dom';
 
 function Projects() {
