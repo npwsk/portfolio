@@ -1,0 +1,31 @@
+@use "@/styles/colors" as *;
+
+.menu {
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  gap: 1.75em;
+}
+
+.listItem {
+}
+
+.link {
+  text-decoration: none;
+  font-weight: bold;
+  color: $color-main;
+
+  &.isActive {
+    &::after {
+      content: "";
+      display: block;
+      height: 0.25em;
+      width: 75%;
+      background-color: $color-accent-1;
+    }
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import { getProjects } from '@/content';
 import { NavLink, Outlet } from 'react-router-dom';
 
-function Projects() {
+const Projects = () => {
   const projects = getProjects();
 
   return (
@@ -24,6 +24,6 @@ function Projects() {
       <Outlet />
     </>
   );
-}
+};
 
 export default Projects;

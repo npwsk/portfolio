@@ -1,0 +1,39 @@
+@use "@/styles/colors" as *;
+
+.mobileMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  overflow: auto;
+  background-color: $color-main-bg;
+}
+
+.menuList {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: bold;
+  color: $color-main;
+
+  &.isActive {
+    &::after {
+      content: "";
+      display: block;
+      height: 0.25em;
+      width: 75%;
+      background-color: $color-accent-1;
+    }
+  }
+}

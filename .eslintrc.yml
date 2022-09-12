@@ -24,9 +24,13 @@ settings:
         - .jsx
         - .json
 rules:
-  react/react-in-jsx-scope: off
   prettier/prettier: error
   no-restricted-exports:
     - error
     - restrictedNamedExports:
         - then
+  react/react-in-jsx-scope: off
+  react/function-component-definition:
+    - error
+    - namedComponents: arrow-function
+      unnamedComponents: arrow-function
