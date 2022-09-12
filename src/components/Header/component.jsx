@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
 import Wrapper from '@/components/Wrapper';
 import Overlay from '@/components/Overlay';
@@ -10,6 +11,9 @@ import { navItems } from '@/constants';
 import classes from './styles.module.scss';
 
 const Header = () => {
+  const { t } = useTranslation('translation', { keyPrefix: 'menu' });
+  const navItemsTranslated = navItems.map((item) => ({ ...item, text: t(item.key) }));
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen((isOpen) => !isOpen);
@@ -20,13 +24,13 @@ const Header = () => {
         <div className={classes.content}>
           <Logo />
           <div className={classes.menu}>
-            <Menu items={navItems} />
+            <Menu items={navItemsTranslated} />
           </div>
 
           <Overlay isVisible={isMobileMenuOpen} onClick={toggleMobileMenu} />
 
           <div className={classNames(classes.mobileMenu, { [classes.isOpen]: isMobileMenuOpen })}>
-            <MobileMenu items={navItems} closeMenu={toggleMobileMenu} />
+            <MobileMenu items={navItemsTranslated} closeMenu={toggleMobileMenu} />
           </div>
 
           <div className={classes.burger}>

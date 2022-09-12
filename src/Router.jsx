@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from '@/pages/Home';
 import About from '@/pages/About';
 import Projects from '@/pages/Projects';
 // import Experience from '@/pages/Experience';
@@ -7,12 +8,13 @@ import Education from '@/pages/Education';
 import Contacts from '@/pages/Contacts';
 import NotFound from '@/pages/NotFound';
 import Project from '@/components/Project';
-import Layout from '@/components/Layout/component';
+import Layout from '@/components/Layout';
 
 const Router = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="projects" element={<Projects />}>
           <Route path=":projectId" element={<Project />} />
