@@ -1,5 +1,6 @@
-import { ReactComponent as GithubIcon } from '@/assets/icons/github.svg';
-import { ReactComponent as TelegramIcon } from '@/assets/icons/telegram.svg';
+import { ReactComponent as GithubIcon } from '@/assets/icons/outlined/github.svg';
+import { ReactComponent as TelegramIcon } from '@/assets/icons/outlined/telegram.svg';
+import { ReactComponent as MailIcon } from '@/assets/icons/outlined/mail.svg';
 
 export const navItems = [
   { id: 'home_navlink', route: '/', text: 'Home', key: 'home' },
@@ -7,7 +8,7 @@ export const navItems = [
   // { id: 'projects_navlink', route: '/projects', text: 'Projects', key: 'projects' },
   // { id: 'experience_navlink', route: '/experience', text: 'Experience', key: 'experience' },
   // { id: 'education_navlink', route: '/education', text: 'Education', key: 'education' },
-  { id: 'contacts_navlink', route: '/contacts', text: 'Contacts', key: 'contacts' },
+  // { id: 'contacts_navlink', route: '/contacts', text: 'Contacts', key: 'contacts' },
 ];
 
 export const contacts = [
@@ -16,7 +17,7 @@ export const contacts = [
     title: 'Email',
     text: 'perfil.nika@gmail.com',
     url: 'mailto:perfil.nika@gmail.com',
-    icon: null,
+    icon: MailIcon,
     key: 'email',
   },
   {

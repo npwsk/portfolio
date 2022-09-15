@@ -1,0 +1,26 @@
+@use "@/styles/mixins" as *;
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.listItem {
+}
+
+.contactsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  max-width: 10rem;
+
+  @include for-tablet-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contactLink {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}

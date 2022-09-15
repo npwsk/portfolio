@@ -9,6 +9,7 @@ import MobileMenu from '@/components/MobileMenu';
 import BurgerButton from '@/components/Buttons/BurgerButton';
 import { navItems } from '@/constants';
 import classes from './styles.module.scss';
+import ContactsList from '../ContactsList/component';
 
 const Header = () => {
   const { t } = useTranslation('translation', { keyPrefix: 'menu' });
@@ -23,6 +24,9 @@ const Header = () => {
       <Wrapper>
         <div className={classes.content}>
           <Logo />
+
+          <ContactsList iconsOnly layout="row" size="s" />
+
           <div className={classes.menu}>
             <Menu items={navItemsTranslated} />
           </div>
