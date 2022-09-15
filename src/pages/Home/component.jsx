@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Wrapper from '@/components/Wrapper';
+import Wrapper from '@/components/ui/Wrapper';
 
 const Home = () => {
   const { t } = useTranslation();

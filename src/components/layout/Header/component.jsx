@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
-import Wrapper from '@/components/Wrapper';
-import Overlay from '@/components/Overlay';
+import Wrapper from '@/components/ui/Wrapper';
+import Overlay from '@/components/ui/Overlay';
 import Logo from '@/components/Logo';
 import Menu from '@/components/Menu';
 import MobileMenu from '@/components/MobileMenu';
-import BurgerButton from '@/components/Buttons/BurgerButton';
+import BurgerButton from '@/components/ui/Buttons/BurgerButton';
 import { navItems } from '@/constants';
 import classes from './styles.module.scss';
 

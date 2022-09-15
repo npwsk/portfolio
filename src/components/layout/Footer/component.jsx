@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import Wrapper from '@/components/Wrapper/component';
+import Wrapper from '@/components/ui/Wrapper/component';
 import classes from './styles.module.scss';
-import ContactsList from '../ContactsList/component';
+import ContactsList from '../../ContactsList/component';
 
 const Footer = () => {
   const { t } = useTranslation('translation');

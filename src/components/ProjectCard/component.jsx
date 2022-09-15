@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { getProjectById } from '@/content';
 
-const Project = () => {
+const ProjectDetails = () => {
   const params = useParams();
   const project = getProjectById(parseInt(params.projectId, 10));
 
@@ -26,4 +26,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default ProjectDetails;

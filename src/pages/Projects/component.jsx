@@ -1,12 +1,13 @@
 import React from 'react';
 import { getProjects } from '@/content';
 import { NavLink, Outlet } from 'react-router-dom';
+import Wrapper from '@/components/ui/Wrapper';
 
 const Projects = () => {
   const projects = getProjects();
 
   return (
-    <>
+    <Wrapper>
       <h2>Projects</h2>
       <ul>
         {projects.map((project) => (
@@ -22,7 +23,7 @@ const Projects = () => {
         ))}
       </ul>
       <Outlet />
-    </>
+    </Wrapper>
   );
 };
 
