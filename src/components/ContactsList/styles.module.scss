@@ -18,40 +18,40 @@
   // @include for-tablet-up {
   //   grid-template-columns: repeat(2, 1fr);
   // }
+  display: flex;
+  gap: 1em;
 }
 
 .column {
+  flex-direction: column;
 }
 
 .row {
-  display: flex;
-  gap: 1em;
 }
 
 .contactLink {
   display: flex;
   align-items: center;
   gap: 1em;
-
-  &Small {
-    font-size: 0.5rem;
-  }
-
-  &Medium {
-    font-size: 1rem;
-  }
-
-  &Large {
-    font-size: 1.5rem;
-  }
 }
 
 .iconContainer {
   background-color: $color-main;
   border-radius: 50%;
-  padding: 0.75em;
   display: flex;
   line-height: 1;
+
+  &Small {
+    padding: 0.35em;
+  }
+
+  &Medium {
+    padding: 0.5em;
+  }
+
+  &Large {
+    padding: 0.5em;
+  }
 }
 
 .icon {

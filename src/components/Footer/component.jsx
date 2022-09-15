@@ -1,20 +1,23 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import Wrapper from '@/components/Wrapper/component';
-import { ReactComponent as Icon } from '@/assets/icons/github.svg';
 import classes from './styles.module.scss';
+import ContactsList from '../ContactsList/component';
 
-const Footer = () => (
-  <footer>
-    <Wrapper>
-      <div className={classes.content}>
-        <a href="https://github.com/npwsk" target="_blank" rel="noopener noreferrer">
-          <Icon />
-          {/* npwsk */}
-        </a>
-        2022
-      </div>
-    </Wrapper>
-  </footer>
-);
+const Footer = () => {
+  const { t } = useTranslation('translation');
+  return (
+    <footer>
+      <Wrapper>
+        <div className={classes.content}>
+          <ContactsList iconsOnly layout="row" iconSize="m" />
+          <span>
+            &copy; 2022 {t('about.firstName')} {t('about.lastName')}
+          </span>
+        </div>
+      </Wrapper>
+    </footer>
+  );
+};
 
 export default Footer;

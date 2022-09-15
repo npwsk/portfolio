@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { contacts } from '@/constants';
 import classes from './styles.module.scss';
 
-const ContactsList = ({ iconsOnly = false, layout = 'column', size = 'm' }) => {
+const ContactsList = ({ iconsOnly = false, layout = 'column', iconSize = 's' }) => {
   const { t } = useTranslation('translation', { keyPrefix: 'contacts' });
 
   const translatedContacts = contacts.map((contact) => ({
@@ -22,19 +22,21 @@ const ContactsList = ({ iconsOnly = false, layout = 'column', size = 'm' }) => {
     >
       {translatedContacts.map((contact) => (
         <li key={`main_${contact.key}_li`}>
-          {/* {contact.title}: */}
           <a
-            className={classNames(classes.contactLink, {
-              [classes.contactLinkSmall]: size === 's',
-              [classes.contactLinkMedium]: size === 'm',
-              [classes.contactLinkLarge]: size === 'l',
-            })}
+            className={classNames(classes.contactLink)}
             href={contact.url}
             target="_blank"
             rel="noopener noreferrer"
             key={`main_${contact.key}_a`}
+            title={contact.title}
           >
-            <div className={classes.iconContainer}>
+            <div
+              className={classNames(classes.iconContainer, {
+                [classes.iconContainerSmall]: iconSize === 's',
+                [classes.iconContainerMedium]: iconSize === 'm',
+                [classes.iconContainerLarge]: iconSize === 'l',
+              })}
+            >
               <contact.icon className={classes.icon} />
             </div>
             {iconsOnly ? null : contact.text}
@@ -48,7 +50,7 @@ const ContactsList = ({ iconsOnly = false, layout = 'column', size = 'm' }) => {
 ContactsList.propTypes = {
   iconsOnly: PropTypes.bool,
   layout: PropTypes.oneOf(['row', 'column']),
-  size: PropTypes.oneOf(['s', 'm', 'l']),
+  iconSize: PropTypes.oneOf(['s', 'm', 'l']),
 };
 
 export default ContactsList;

@@ -1,6 +1,6 @@
 const contacts = {
-  email: 'Почта',
-  telegram: 'Телеграм',
+  email: 'Email',
+  telegram: 'Telegram',
   github: 'Github',
 };
 
