@@ -16,7 +16,7 @@ const Project = () => {
       <div>{project.year}</div>
       <ul>
         {project.stack.map((item) => (
-          <li key={item}>{item}</li>
+          <li key={item.id}>{item.name}</li>
         ))}
       </ul>
       <a href={project.source} target="_blank" rel="noopener noreferrer">

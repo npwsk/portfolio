@@ -1,5 +1,6 @@
 const projects = {
   toProjects: 'Back to projects',
+  toProject: 'Learn more',
   source: 'github',
   deploy: 'Deploy link',
   ticTackToe: {

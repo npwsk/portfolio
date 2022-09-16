@@ -1,0 +1,34 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+@use "sass:math";
+
+.title {
+}
+
+.cardsGrid {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $card-width);
+  justify-content: center;
+  justify-items: center;
+  gap: $gap--l;
+}
+
+.gridCell {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+
+  @include transition-main;
+
+  &:hover {
+    transform: translateY(math.div(-$gap--l, 4));
+  }
+}

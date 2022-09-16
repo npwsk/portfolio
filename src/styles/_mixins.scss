@@ -1,4 +1,7 @@
 @use "./breakpoints" as *;
+@use "./variables" as *;
+
+// Media queries
 
 @mixin for-mobile-only {
   @media screen and (max-width: $breakpoint-mobile) {
@@ -21,5 +24,16 @@
 @mixin for-desktop-up {
   @media screen and (min-width: ($breakpoint-tablet + 1)) {
     @content;
+  }
+}
+
+// Transition
+
+@mixin transition-main($properies: all) {
+  transition-duration: $transition-duration--main;
+  transition-timing-function: $transition-tfunc--main;
+
+  @each $prop in $properies {
+    transition-property: $prop;
   }
 }

@@ -1,0 +1,70 @@
+@use "@/styles/colors" as *;
+@use "@/styles/variables" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: $gap--s;
+  width: $card-width;
+  height: 100%;
+
+  overflow: hidden;
+  border-radius: $corner-radius--m;
+  box-shadow: $shadow;
+}
+
+.cardHeader {
+  padding-right: $padding--s;
+  padding-left: $padding--s;
+}
+
+.cardBody {
+  flex-grow: 1;
+  padding-right: $padding--s;
+  padding-left: $padding--s;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $padding--s;
+  padding-top: 0;
+}
+
+.preview {
+  height: 100px;
+  width: 100%;
+  background: $gradient-placeholder;
+}
+
+.title {
+  margin: 0;
+}
+
+.description {
+  margin: 0;
+}
+
+.skills {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap--s;
+}
+
+.label {
+  padding: $padding--xs;
+  color: #ffffff;
+  font-size: $f-size--s;
+  line-height: 1;
+  text-transform: uppercase;
+  border-radius: $corner-radius--s;
+}
+
+.moreLinkIcon {
+  fill: $color-main;
+}

@@ -1,25 +1,24 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
 import Wrapper from '@/components/ui/Wrapper';
+import ProjectCard from '@/components/ProjectCard';
 import { getProjects } from '@/constants';
+import styles from './styles.module.scss';
 
 const Projects = () => {
   const projects = getProjects();
-  const { t } = useTranslation('translation', { keyPrefix: 'projects' });
 
   return (
     <Wrapper>
-      <h2>Projects</h2>
-      <ul>
+      <ul className={styles.cardsGrid}>
         {projects.map((project) => (
-          <li key={project.id}>
+          <li className={styles.gridCell} key={`${project.id}_li`}>
             <NavLink
+              className={styles.link}
               to={`/projects/${project.id}`}
               key={`${project.id}_link`}
-              style={({ isActive }) => ({ color: isActive ? 'lightblue' : 'lightgray' })}
             >
-              {t(`${project.id}.name`)}
+              <ProjectCard key={`${project.id}_card`} projectId={project.id} />
             </NavLink>
           </li>
         ))}

@@ -11,6 +11,45 @@ export const navItems = [
   // { id: 'contacts_navlink', route: '/contacts', text: 'Contacts', key: 'contacts' },
 ];
 
+export const skills = [
+  {
+    id: 'html',
+    name: 'HTML',
+    color: 'orange',
+    icon: null,
+  },
+  {
+    id: 'css',
+    name: 'CSS',
+    color: 'deepskyblue',
+    icon: null,
+  },
+  {
+    id: 'sass',
+    name: 'SASS/SCSS',
+    color: 'deeppink',
+    icon: null,
+  },
+  {
+    id: 'javascript',
+    name: 'JavaScript',
+    color: 'gold',
+    icon: null,
+  },
+  {
+    id: 'typescript',
+    name: 'TypeScript',
+    color: 'royalblue',
+    icon: null,
+  },
+  {
+    id: 'react',
+    name: 'React',
+    color: 'lightblue',
+    icon: null,
+  },
+];
+
 export const contacts = [
   {
     id: 'email',
@@ -38,28 +77,28 @@ export const contacts = [
 const projects = [
   {
     id: 'ticTackToe',
-    stack: ['JavaScript', 'HTML', 'CSS'],
+    stack: ['javascript', 'html', 'css'],
     source: 'https://github.com/npwsk/tic-tac-toe',
     deploy: 'https://npwsk.github.io/tic-tac-toe/tic-tac-toe/',
     year: 2022,
   },
   {
     id: 'movieApp',
-    stack: ['JavaScript', 'HTML', 'CSS'],
+    stack: ['javascript', 'html', 'css'],
     source: 'https://github.com/npwsk/movie-app',
     deploy: 'https://npwsk-movie-app.netlify.app/',
     year: 2022,
   },
   {
     id: 'virtualKeyboard',
-    stack: ['JavaScript', 'HTML', 'SCSS'],
+    stack: ['javascript', 'html', 'sass'],
     source: 'https://github.com/npwsk/virtual-keyboard',
     deploy: 'https://npwsk.github.io/virtual-keyboard/',
     year: 2022,
   },
   {
     id: 'onlineStore',
-    stack: ['TypeScript', 'HTML', 'SCSS'],
+    stack: ['typescript', 'html', 'sass'],
     source: 'https://github.com/npwsk/online-store',
     deploy: 'https://npwsk.github.io/virtual-keyboard/',
     year: 2022,
@@ -68,4 +107,8 @@ const projects = [
 
 export const getProjects = () => projects;
 
-export const getProjectById = (id) => projects.find((project) => project.id === id);
+export const getProjectById = (id) => {
+  const foundProject = projects.find((project) => project.id === id);
+  const stack = foundProject.stack.map((itemId) => skills.find((skill) => skill.id === itemId));
+  return { ...foundProject, stack };
+};
