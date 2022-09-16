@@ -6,12 +6,13 @@ import Wrapper from '@/components/ui/Wrapper';
 
 const Project = () => {
   const params = useParams();
-  const project = getProjectById(parseInt(params.projectId, 10));
-  const { t } = useTranslation('translation');
+  const project = getProjectById(params.projectId);
+  const { t } = useTranslation('translation', { keyPrefix: 'projects' });
+
   return (
     <Wrapper>
-      <NavLink to="/projects">{t('navigation.toProjects')}</NavLink>
-      <h2>{t(`projects.${project.key}.name`)}</h2>
+      <NavLink to="/projects">{t('toProjects')}</NavLink>
+      <h2>{t(`${project.id}.name`)}</h2>
       <div>{project.year}</div>
       <ul>
         {project.stack.map((item) => (
@@ -19,12 +20,12 @@ const Project = () => {
         ))}
       </ul>
       <a href={project.source} target="_blank" rel="noopener noreferrer">
-        Source
+        {t(`source`)}
       </a>
-      <a href={project.deploy} target="_blank" rel="noopener noreferrer">
-        Deploy
-      </a>
-      <p>{t(`projects.${project.key}.description`)}</p>
+      {/* <a href={project.deploy} target="_blank" rel="noopener noreferrer">
+        {t(`deploy`)}
+      </a> */}
+      <p>{t(`${project.id}.description`)}</p>
     </Wrapper>
   );
 };

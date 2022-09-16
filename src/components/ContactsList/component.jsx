@@ -10,7 +10,7 @@ const ContactsList = ({ iconsOnly = false, layout = 'column', iconSize = 's' }) 
 
   const translatedContacts = contacts.map((contact) => ({
     ...contact,
-    title: t(contact.key),
+    title: t(contact.id),
   }));
 
   return (
@@ -21,13 +21,13 @@ const ContactsList = ({ iconsOnly = false, layout = 'column', iconSize = 's' }) 
       })}
     >
       {translatedContacts.map((contact) => (
-        <li key={`main_${contact.key}_li`}>
+        <li key={`main_${contact.id}_li`}>
           <a
             className={classNames(classes.contactLink)}
             href={contact.url}
             target="_blank"
             rel="noopener noreferrer"
-            key={`main_${contact.key}_a`}
+            key={`main_${contact.id}_a`}
             title={contact.title}
           >
             <div

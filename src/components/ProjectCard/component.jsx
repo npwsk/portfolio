@@ -4,7 +4,7 @@ import { getProjectById } from '@/content';
 
 const ProjectDetails = () => {
   const params = useParams();
-  const project = getProjectById(parseInt(params.projectId, 10));
+  const project = getProjectById(params.projectId);
 
   return (
     <div>

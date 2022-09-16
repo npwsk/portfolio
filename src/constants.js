@@ -13,59 +13,52 @@ export const navItems = [
 
 export const contacts = [
   {
-    id: 0,
+    id: 'email',
     title: 'Email',
     text: 'perfil.nika@gmail.com',
     url: 'mailto:perfil.nika@gmail.com',
     icon: MailIcon,
-    key: 'email',
   },
   {
-    id: 1,
+    id: 'telegram',
     title: 'Telegram',
     text: '@nika_perfilova',
     url: 'https://t.me/nika_perfilova',
     icon: TelegramIcon,
-    key: 'telegram',
   },
   {
-    id: 2,
+    id: 'github',
     title: 'Github',
     text: 'npwsk',
     url: 'https://github.com/npwsk',
     icon: GithubIcon,
-    key: 'github',
   },
 ];
 
 const projects = [
   {
-    id: 0,
-    key: 'ticTackToe',
+    id: 'ticTackToe',
     stack: ['JavaScript', 'HTML', 'CSS'],
     source: 'https://github.com/npwsk/tic-tac-toe',
     deploy: 'https://npwsk.github.io/tic-tac-toe/tic-tac-toe/',
     year: 2022,
   },
   {
-    id: 1,
-    key: 'movieApp',
+    id: 'movieApp',
     stack: ['JavaScript', 'HTML', 'CSS'],
     source: 'https://github.com/npwsk/movie-app',
     deploy: 'https://npwsk-movie-app.netlify.app/',
     year: 2022,
   },
   {
-    id: 2,
-    key: 'virtualKeyboard',
+    id: 'virtualKeyboard',
     stack: ['JavaScript', 'HTML', 'SCSS'],
     source: 'https://github.com/npwsk/virtual-keyboard',
     deploy: 'https://npwsk.github.io/virtual-keyboard/',
     year: 2022,
   },
   {
-    id: 3,
-    key: 'onlineStore',
+    id: 'onlineStore',
     stack: ['TypeScript', 'HTML', 'SCSS'],
     source: 'https://github.com/npwsk/online-store',
     deploy: 'https://npwsk.github.io/virtual-keyboard/',

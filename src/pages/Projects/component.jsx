@@ -1,10 +1,12 @@
 import React from 'react';
-import { getProjects } from '@/content';
+import { useTranslation } from 'react-i18next';
 import { NavLink, Outlet } from 'react-router-dom';
 import Wrapper from '@/components/ui/Wrapper';
+import { getProjects } from '@/constants';
 
 const Projects = () => {
   const projects = getProjects();
+  const { t } = useTranslation('translation', { keyPrefix: 'projects' });
 
   return (
     <Wrapper>
@@ -17,7 +19,7 @@ const Projects = () => {
               key={`${project.id}_link`}
               style={({ isActive }) => ({ color: isActive ? 'lightblue' : 'lightgray' })}
             >
-              {project.name}
+              {t(`${project.id}.name`)}
             </NavLink>
           </li>
         ))}

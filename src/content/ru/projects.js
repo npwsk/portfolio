@@ -1,4 +1,7 @@
 const projects = {
+  toProjects: 'Назад к проектам',
+  source: 'github',
+  deploy: 'Deploy link',
   ticTackToe: {
     name: 'Tic-tac-toe',
     description: 'Simple tic-tac-toe game made with vanilla JS',
