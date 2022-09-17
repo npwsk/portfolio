@@ -1,11 +1,11 @@
 const projects = {
   toProjects: 'Назад к проектам',
   toProject: 'Узнать больше',
-  source: 'github',
+  source: 'Github',
   deploy: 'Deploy link',
   ticTacToe: {
-    name: 'Tic-tac-toe',
-    description: 'Simple tic-tac-toe game made with vanilla JS',
+    name: 'Tic tac toe',
+    description: 'Игра крестики-нолики',
   },
   movieApp: {
     name: 'Movie app',
@@ -13,11 +13,15 @@ const projects = {
   },
   virtualKeyboard: {
     name: 'Virtual keyboard',
-    description: 'A virtual copy of a physical keyboard',
+    description: 'Виртуальная копия физической клавиатуры',
   },
   onlineStore: {
     name: 'Online store',
-    description: 'A virtual copy of a physical keyboard',
+    description: 'Каталог наушников',
+  },
+  'inventory-accounting-system': {
+    name: 'Система инвентарного учета',
+    description: 'Приложение для учета интерактивных досок в университете',
   },
 };
 

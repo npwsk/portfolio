@@ -31,6 +31,12 @@ export const skills = [
     icon: null,
   },
   {
+    id: 'bootstrap',
+    name: 'Bootstrap',
+    color: 'deepskyblue',
+    icon: null,
+  },
+  {
     id: 'javascript',
     name: 'JavaScript',
     color: 'gold',
@@ -45,6 +51,12 @@ export const skills = [
   {
     id: 'react',
     name: 'React',
+    color: 'lightblue',
+    icon: null,
+  },
+  {
+    id: 'redux',
+    name: 'Redux',
     color: 'lightblue',
     icon: null,
   },
@@ -76,19 +88,10 @@ export const contacts = [
 
 const projects = [
   {
-    id: 'ticTacToe',
-    stack: ['javascript', 'html', 'css'],
-    source: 'https://github.com/npwsk/tic-tac-toe',
-    deploy: 'https://npwsk.github.io/tic-tac-toe/tic-tac-toe/',
-    year: 2022,
-    preview: null,
-    image: null,
-  },
-  {
-    id: 'movieApp',
-    stack: ['javascript', 'html', 'css'],
-    source: 'https://github.com/npwsk/movie-app',
-    deploy: 'https://npwsk-movie-app.netlify.app/',
+    id: 'inventory-accounting-system',
+    stack: ['react', 'redux', 'Express', 'MySQL', 'bootstrap'],
+    source: 'https://github.com/npwsk/inventory-accounting-system',
+    deploy: 'https://inv-accounting.herokuapp.com/',
     year: 2022,
     preview: null,
     image: null,
@@ -111,17 +114,46 @@ const projects = [
     preview: null,
     image: null,
   },
+  {
+    id: 'ticTacToe',
+    stack: ['javascript', 'html', 'css'],
+    source: 'https://github.com/npwsk/tic-tac-toe',
+    deploy: 'https://npwsk.github.io/tic-tac-toe/tic-tac-toe/',
+    year: 2022,
+    preview: null,
+    image: null,
+  },
+  // {
+  //   id: 'movieApp',
+  //   stack: ['javascript', 'html', 'css'],
+  //   source: 'https://github.com/npwsk/movie-app',
+  //   deploy: 'https://npwsk-movie-app.netlify.app/',
+  //   year: 2022,
+  //   preview: null,
+  //   image: null,
+  // },
 ];
+
+const getDefaultSkill = (name) => ({
+  id: name,
+  name,
+  color: 'lightgray',
+  icon: null,
+});
 
 export const getProjects = () =>
   projects.map((proj) => {
-    const stack = proj.stack.map((itemId) => skills.find((skill) => skill.id === itemId));
+    const stack = proj.stack.map(
+      (itemId) => skills.find((skill) => skill.id === itemId) ?? getDefaultSkill(itemId)
+    );
     return { ...proj, stack };
   });
 
 export const getProjectById = (id) => {
   const foundProject = projects.find((project) => project.id === id);
   if (!foundProject) return null;
-  const stack = foundProject.stack.map((itemId) => skills.find((skill) => skill.id === itemId));
+  const stack = foundProject.stack.map(
+    (itemId) => skills.find((skill) => skill.id === itemId) ?? getDefaultSkill(itemId)
+  );
   return { ...foundProject, stack };
 };

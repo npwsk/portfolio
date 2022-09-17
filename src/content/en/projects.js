@@ -19,6 +19,10 @@ const projects = {
     name: 'Online store',
     description: 'A virtual copy of a physical keyboard',
   },
+  'inventory-accounting-system': {
+    name: 'Система инвентарного учета',
+    description: 'Приложение для учета интерактивных досок в университете',
+  },
 };
 
 export default projects;
