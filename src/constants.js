@@ -76,7 +76,7 @@ export const contacts = [
 
 const projects = [
   {
-    id: 'ticTackToe',
+    id: 'ticTacToe',
     stack: ['javascript', 'html', 'css'],
     source: 'https://github.com/npwsk/tic-tac-toe',
     deploy: 'https://npwsk.github.io/tic-tac-toe/tic-tac-toe/',
@@ -121,6 +121,7 @@ export const getProjects = () =>
 
 export const getProjectById = (id) => {
   const foundProject = projects.find((project) => project.id === id);
+  if (!foundProject) return null;
   const stack = foundProject.stack.map((itemId) => skills.find((skill) => skill.id === itemId));
   return { ...foundProject, stack };
 };

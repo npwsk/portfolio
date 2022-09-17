@@ -3,7 +3,7 @@ const projects = {
   toProject: 'Learn more',
   source: 'github',
   deploy: 'Deploy link',
-  ticTackToe: {
+  ticTacToe: {
     name: 'Tic-tac-toe',
     description: 'Simple tic-tac-toe game made with vanilla JS',
   },

@@ -14,6 +14,7 @@ const Project = () => {
   return (
     <Wrapper>
       <NavLink to="/projects">{t('toProjects')}</NavLink>
+
       <ProjectDetails
         id={params.projectId}
         name={t(`${project.id}.name`)}
