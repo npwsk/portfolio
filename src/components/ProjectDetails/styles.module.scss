@@ -1,0 +1,29 @@
+@use "@/styles/colors" as *;
+
+.grid {
+  display: grid;
+  grid-template:
+    "title image"
+    "details image";
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.projectTitle {
+  grid-area: title;
+
+  // margin: 0;
+}
+
+.projectDetails {
+  grid-area: details;
+}
+
+.projectImage {
+  grid-area: image;
+
+  width: 20rem;
+  height: 20rem;
+  background: $gradient-placeholder;
+}

@@ -81,6 +81,8 @@ const projects = [
     source: 'https://github.com/npwsk/tic-tac-toe',
     deploy: 'https://npwsk.github.io/tic-tac-toe/tic-tac-toe/',
     year: 2022,
+    preview: null,
+    image: null,
   },
   {
     id: 'movieApp',
@@ -88,6 +90,8 @@ const projects = [
     source: 'https://github.com/npwsk/movie-app',
     deploy: 'https://npwsk-movie-app.netlify.app/',
     year: 2022,
+    preview: null,
+    image: null,
   },
   {
     id: 'virtualKeyboard',
@@ -95,6 +99,8 @@ const projects = [
     source: 'https://github.com/npwsk/virtual-keyboard',
     deploy: 'https://npwsk.github.io/virtual-keyboard/',
     year: 2022,
+    preview: null,
+    image: null,
   },
   {
     id: 'onlineStore',
@@ -102,10 +108,16 @@ const projects = [
     source: 'https://github.com/npwsk/online-store',
     deploy: 'https://npwsk.github.io/virtual-keyboard/',
     year: 2022,
+    preview: null,
+    image: null,
   },
 ];
 
-export const getProjects = () => projects;
+export const getProjects = () =>
+  projects.map((proj) => {
+    const stack = proj.stack.map((itemId) => skills.find((skill) => skill.id === itemId));
+    return { ...proj, stack };
+  });
 
 export const getProjectById = (id) => {
   const foundProject = projects.find((project) => project.id === id);

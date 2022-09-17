@@ -1,8 +1,10 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { getProjectById } from '@/constants';
 import { NavLink, useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Wrapper from '@/components/ui/Wrapper';
+import ProjectDetails from '@/components/ProjectDetails';
+import { getProjectById } from '@/constants';
+// import classes from './styles.module.scss';
 
 const Project = () => {
   const params = useParams();
@@ -12,20 +14,16 @@ const Project = () => {
   return (
     <Wrapper>
       <NavLink to="/projects">{t('toProjects')}</NavLink>
-      <h2>{t(`${project.id}.name`)}</h2>
-      <div>{project.year}</div>
-      <ul>
-        {project.stack.map((item) => (
-          <li key={item.id}>{item.name}</li>
-        ))}
-      </ul>
-      <a href={project.source} target="_blank" rel="noopener noreferrer">
-        {t(`source`)}
-      </a>
-      {/* <a href={project.deploy} target="_blank" rel="noopener noreferrer">
-        {t(`deploy`)}
-      </a> */}
-      <p>{t(`${project.id}.description`)}</p>
+      <ProjectDetails
+        id={params.projectId}
+        name={t(`${project.id}.name`)}
+        description={t(`${project.id}.description`)}
+        year={project.year}
+        stack={project.stack}
+        sourceUrl={project.source}
+        deployUrl={project.deploy}
+        image={project.image}
+      />
     </Wrapper>
   );
 };

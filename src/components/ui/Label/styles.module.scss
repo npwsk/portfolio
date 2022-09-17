@@ -1,0 +1,11 @@
+@use "@/styles/colors" as *;
+@use "@/styles/variables" as *;
+
+.label {
+  padding: $padding--xs;
+  color: #ffffff;
+  font-size: $f-size--s;
+  line-height: 1;
+  text-transform: uppercase;
+  border-radius: $corner-radius--s;
+}

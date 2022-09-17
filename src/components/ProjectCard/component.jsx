@@ -1,48 +1,48 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
-import { getProjectById } from '@/constants';
+import Label from '@/components/ui/Label';
 import styles from './styles.module.scss';
 // import { ReactComponent as ArrowIcon } from '@/assets/icons/arrow-right.svg';
 
-const ProjectCard = ({ projectId }) => {
-  const project = getProjectById(projectId);
-  const { t } = useTranslation('translation', { keyPrefix: 'projects' });
+const ProjectCard = ({ id, title, preview, description, stack }) => (
+  <article className={styles.card}>
+    <div className={styles.preview}>{preview}</div>
 
-  return (
-    <article className={styles.card}>
-      <div className={styles.preview}>{project.preview}</div>
+    <div className={styles.cardHeader}>
+      <h3 className={styles.title}>{title}</h3>
+    </div>
 
-      <div className={styles.cardHeader}>
-        <h3 className={styles.title}>{t(`${project.id}.name`)}</h3>
-      </div>
+    <div className={styles.cardBody}>
+      <p className={styles.description}>{description}</p>
+    </div>
 
-      <div className={styles.cardBody}>
-        <p className={styles.description}>{t(`${project.id}.description`)}</p>
-      </div>
+    <div className={styles.cardFooter}>
+      <ul className={styles.skills}>
+        {stack.map((item) => (
+          <li key={`${id}_${item.id}`}>
+            <Label key={`${id}_${item.id}_label`} name={item.name} color={item.color} />
+          </li>
+        ))}
+      </ul>
 
-      <div className={styles.cardFooter}>
-        <ul className={styles.skills}>
-          {project.stack.map((item) => (
-            <li
-              className={styles.label}
-              key={`${project.id}_${item.id}`}
-              style={{ backgroundColor: item.color }}
-            >
-              {item.name}
-            </li>
-          ))}
-        </ul>
-
-        {/* <span>{t(`toProject`)}</span> */}
-        {/* <ArrowIcon className={styles.moreLinkIcon} /> */}
-      </div>
-    </article>
-  );
-};
+      {/* <span>{t(`toProject`)}</span> */}
+      {/* <ArrowIcon className={styles.moreLinkIcon} /> */}
+    </div>
+  </article>
+);
 
 ProjectCard.propTypes = {
-  projectId: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  preview: PropTypes.elementType,
+  description: PropTypes.string.isRequired,
+  stack: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      color: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default ProjectCard;
