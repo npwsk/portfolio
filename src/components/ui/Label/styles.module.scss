@@ -2,6 +2,7 @@
 @use "@/styles/variables" as *;
 
 .label {
+  display: inline-block;
   padding: $padding--xs;
   color: #ffffff;
   font-size: $f-size--s;

@@ -1,29 +1,62 @@
 @use "@/styles/colors" as *;
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
 
 .grid {
   display: grid;
-  grid-template:
+  grid-template-columns: auto 20rem;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
     "title image"
     "details image";
   justify-content: center;
-  align-items: center;
-  gap: 3rem;
+  gap: $gap--m $gap--l;
+
+  @include for-tablet-down {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "details"
+      "image";
+  }
 }
 
 .projectTitle {
   grid-area: title;
 
   // margin: 0;
+  margin-bottom: 0;
+  // margin-top: auto;
+  font-size: $f-size--heading-l;
 }
 
 .projectDetails {
   grid-area: details;
+
+  display: flex;
+  flex-direction: column;
+  gap: $gap--s;
 }
 
 .projectImage {
   grid-area: image;
 
-  width: 20rem;
+  // width: 20rem;
+  width: 100%;
   height: 20rem;
   background: $gradient-placeholder;
+}
+
+.skillsList {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap--s;
+}
+
+.projectDescription {
+  margin: 0;
 }

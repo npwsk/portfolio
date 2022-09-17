@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-import Label from '@/components/ui/Label/component';
+import Label from '@/components/ui/Label';
 import classes from './styles.module.scss';
 
 const ProjectDetails = ({ id, name, description, year, stack, sourceUrl, deployUrl, image }) => {
@@ -12,21 +12,21 @@ const ProjectDetails = ({ id, name, description, year, stack, sourceUrl, deployU
       <h2 className={classes.projectTitle}>{name}</h2>
 
       <div className={classes.projectDetails}>
-        <div>{year}</div>
-        <ul>
+        <ul className={classes.skillsList}>
           {stack.map((item) => (
             <li key={`${id}_${item.id}_li`}>
               <Label key={`${id}_${item.id}_label`} name={item.name} color={item.color} />
             </li>
           ))}
         </ul>
+        <div className={classes.projectYear}>{year}</div>
+        <p className={classes.projectDescription}>{description}</p>
         <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
           {t(`source`)}
         </a>
         <a href={deployUrl} target="_blank" rel="noopener noreferrer">
           {t(`deploy`)}
         </a>
-        <p>{description}</p>
       </div>
 
       <div className={classes.projectImage}>{image}</div>
