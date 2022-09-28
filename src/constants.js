@@ -95,6 +95,7 @@ const projects = [
     year: 2022,
     preview: null,
     image: null,
+    features: [],
   },
   {
     id: 'virtualKeyboard',
@@ -104,6 +105,7 @@ const projects = [
     year: 2022,
     preview: null,
     image: null,
+    features: ['languages'],
   },
   {
     id: 'onlineStore',
@@ -113,25 +115,28 @@ const projects = [
     year: 2022,
     preview: null,
     image: null,
+    features: [],
   },
   {
     id: 'ticTacToe',
     stack: ['javascript', 'html', 'css'],
     source: 'https://github.com/npwsk/tic-tac-toe',
-    deploy: 'https://npwsk.github.io/tic-tac-toe/tic-tac-toe/',
+    deploy: 'https://npwsk.github.io/tic-tac-toe/',
     year: 2022,
     preview: null,
     image: null,
+    features: ['modes', 'scoreBoard'],
   },
-  // {
-  //   id: 'movieApp',
-  //   stack: ['javascript', 'html', 'css'],
-  //   source: 'https://github.com/npwsk/movie-app',
-  //   deploy: 'https://npwsk-movie-app.netlify.app/',
-  //   year: 2022,
-  //   preview: null,
-  //   image: null,
-  // },
+  {
+    id: 'movieApp',
+    stack: ['javascript', 'html', 'css'],
+    source: 'https://github.com/npwsk/movie-app',
+    deploy: 'https://npwsk-movie-app.netlify.app/',
+    year: 2022,
+    preview: null,
+    image: null,
+    features: ['search', 'pagination'],
+  },
 ];
 
 const getDefaultSkill = (name) => ({

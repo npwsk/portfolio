@@ -4,7 +4,17 @@ import { useTranslation } from 'react-i18next';
 import Label from '@/components/ui/Label';
 import classes from './styles.module.scss';
 
-const ProjectDetails = ({ id, name, description, year, stack, sourceUrl, deployUrl, image }) => {
+const ProjectDetails = ({
+  id,
+  name,
+  description,
+  year,
+  stack,
+  sourceUrl,
+  deployUrl,
+  image,
+  features,
+}) => {
   const { t } = useTranslation('translation', { keyPrefix: 'projects' });
 
   return (
@@ -19,8 +29,18 @@ const ProjectDetails = ({ id, name, description, year, stack, sourceUrl, deployU
             </li>
           ))}
         </ul>
+
         <div className={classes.projectYear}>{year}</div>
+
         <p className={classes.projectDescription}>{description}</p>
+
+        <ul className={classes.skillsList}>
+          {features.map((feat, i) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <li key={`feature_${i}`}>{feat}</li>
+          ))}
+        </ul>
+
         <a href={sourceUrl} target="_blank" rel="noopener noreferrer">
           {t(`source`)}
         </a>
@@ -49,6 +69,7 @@ ProjectDetails.propTypes = {
   sourceUrl: PropTypes.string.isRequired,
   deployUrl: PropTypes.string.isRequired,
   image: PropTypes.elementType,
+  features: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default ProjectDetails;

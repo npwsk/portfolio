@@ -24,6 +24,7 @@ const Project = () => {
         sourceUrl={project.source}
         deployUrl={project.deploy}
         image={project.image}
+        features={project.features.map((feat) => t(`${project.id}.features.${feat}`))}
       />
     </Wrapper>
   );

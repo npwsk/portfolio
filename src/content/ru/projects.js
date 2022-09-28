@@ -6,22 +6,34 @@ const projects = {
   ticTacToe: {
     name: 'Tic tac toe',
     description: 'Игра крестики-нолики',
+    features: {
+      modes: 'Два режима: соперник - человек или компьютер',
+      scoreBoard: 'Scoreboard: результаты последних 10 игр сохраняются в localStorage.',
+    },
   },
   movieApp: {
     name: 'Movie app',
-    description: 'A movie catalog that helps to search movies by titles',
+    description: 'Каталог фильмов с возможностью поиска',
+    features: {
+      search: 'Поиск фильма или сериала по названию',
+    },
   },
   virtualKeyboard: {
     name: 'Virtual keyboard',
     description: 'Виртуальная копия физической клавиатуры',
+    features: {
+      languages: 'Поддерживаемые языки: английский, русский.',
+    },
   },
   onlineStore: {
     name: 'Online store',
     description: 'Каталог наушников',
+    features: {},
   },
   'inventory-accounting-system': {
     name: 'Система инвентарного учета',
     description: 'Приложение для учета интерактивных досок в университете',
+    features: {},
   },
 };
 
