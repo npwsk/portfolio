@@ -36,7 +36,6 @@
 }
 
 .iconContainer {
-  background-color: $color-main;
   border-radius: 50%;
   display: flex;
   line-height: 1;
@@ -55,7 +54,7 @@
 }
 
 .icon {
-  fill: $color-main-bg;
+  fill: $color-main;
   width: 1rem;
   height: 1rem;
 }
