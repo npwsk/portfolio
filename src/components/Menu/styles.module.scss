@@ -16,16 +16,18 @@
 
 .link {
   text-decoration: none;
-  font-weight: bold;
-  color: $color-main;
+  font-weight: 500;
+  color: $color-main--inactive;
 
   &.isActive {
-    &::after {
-      content: "";
-      display: block;
-      height: 0.25em;
-      width: 75%;
-      background-color: $color-accent-1;
-    }
+    color: $color-main;
+    // font-weight: 500;
+    // &::after {
+    //   content: "";
+    //   display: block;
+    //   height: 0.25em;
+    //   width: 75%;
+    //   background-color: $color-accent-1;
+    // }
   }
 }

@@ -1,0 +1,17 @@
+@use "@/styles/colors" as *;
+
+.link {
+  text-decoration: none;
+  color: $color-main;
+
+  letter-spacing: -1px;
+}
+
+.firstName {
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+.lastName {
+  font-weight: 500;
+}

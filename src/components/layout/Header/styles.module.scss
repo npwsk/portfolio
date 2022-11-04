@@ -11,6 +11,9 @@
 }
 
 .menu {
+  margin-right: auto;
+  margin-left: auto;
+
   @include for-tablet-down {
     display: none;
   }
