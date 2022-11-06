@@ -3,7 +3,7 @@ import { NavLink, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Wrapper from '@/components/ui/Wrapper';
 import ProjectDetails from '@/components/ProjectDetails';
-import { getProjectById } from '@/constants';
+import { getProjectById } from '@/utils/content';
 // import classes from './styles.module.scss';
 
 const Project = () => {

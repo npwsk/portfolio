@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './styles.module.scss';
 
 const Label = ({ name, color }) => (
-  <span className={styles.label} style={{ backgroundColor: color }}>
+  <span className={styles.label} style={{ borderColor: color }}>
     {name}
   </span>
 );

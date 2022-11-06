@@ -4,9 +4,12 @@
 .label {
   display: inline-block;
   padding: $padding--xs;
-  color: #ffffff;
-  font-size: $f-size--s;
+  color: $color-main;
+  font-size: $f-size--xs;
+  font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
-  border-radius: $corner-radius--s;
+  border-radius: $corner-radius--xs;
+  border-width: 1px;
+  border-style: solid;
 }

@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
 import classNames from 'classnames';
-import { contacts } from '@/constants';
+import { config } from '@/content/config';
 import classes from './styles.module.scss';
 
 const ContactsList = ({ iconsOnly = false, layout = 'column', iconSize = 's' }) => {
   const { t } = useTranslation('translation', { keyPrefix: 'contacts' });
 
-  const translatedContacts = contacts.map((contact) => ({
+  const translatedContacts = config.contacts.map((contact) => ({
     ...contact,
     title: t(contact.id),
   }));

@@ -1,4 +1,5 @@
 @use "@/styles/mixins" as *;
+@use "@/styles/z-index" as *;
 
 .header {
 }
@@ -26,6 +27,7 @@
   height: 100%;
   width: 100%;
   max-width: 320px;
+  z-index: $z-index-mobile-menu;
 
   transform: translateX(100%);
   transition: transform 0.3s ease-out;
@@ -42,6 +44,7 @@
 .burger {
   position: absolute;
   right: 0;
+  z-index: $z-index-burger;
 
   @include for-desktop-up {
     display: none;

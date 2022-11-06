@@ -37,3 +37,52 @@
     transition-property: $prop;
   }
 }
+
+// Layout
+
+@mixin column($gap: $gap--s) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+// Other
+
+@mixin scrollbar($width: 10px) {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0 0 0 / 10%) transparent;
+
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: $width;
+    height: $width;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0 0 0 / 10%);
+    border-radius: 10px;
+
+    // padding around thumb
+    border: solid 2px transparent;
+    background-clip: padding-box;
+  }
+}
+
+@mixin scrollbar-on-hover($isY: true, $isX: false, $size: 10px) {
+  // overflow
+  @if ($isY) {
+    overflow-y: auto;
+  }
+
+  @if ($isX) {
+    overflow-x: auto;
+  }
+
+  @include scrollbar($width: $size);
+
+  @media (hover: hover) {
+    &:not(:hover)::-webkit-scrollbar-thumb {
+      background-color: rgba(0 0 0 / 0%);
+    }
+  }
+}

@@ -1,22 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Label from '@/components/ui/Label';
+import { ReactComponent as CodeIcon } from '@/assets/icons/code.svg';
 import styles from './styles.module.scss';
-// import { ReactComponent as ArrowIcon } from '@/assets/icons/arrow-right.svg';
 
-const ProjectCard = ({ id, title, preview, description, stack }) => (
+const ProjectCard = ({ id, title, preview, description, stack, sourceLink }) => (
   <article className={styles.card}>
-    <div className={styles.preview}>{preview}</div>
+    <div className={styles.preview}>
+      <img src={preview} alt={title} className={styles.previewImg} />
+    </div>
 
     <div className={styles.cardHeader}>
       <h3 className={styles.title}>{title}</h3>
     </div>
 
     <div className={styles.cardBody}>
-      <p className={styles.description}>{description}</p>
-    </div>
-
-    <div className={styles.cardFooter}>
       <ul className={styles.skills}>
         {stack.map((item) => (
           <li key={`${id}_${item.id}`}>
@@ -24,9 +22,20 @@ const ProjectCard = ({ id, title, preview, description, stack }) => (
           </li>
         ))}
       </ul>
+      <p className={styles.description}>{description}</p>
+    </div>
 
-      {/* <span>{t(`toProject`)}</span> */}
-      {/* <ArrowIcon className={styles.moreLinkIcon} /> */}
+    <div className={styles.cardFooter}>
+      <a
+        className={styles.sourceLink}
+        href={sourceLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Github"
+      >
+        Github
+        <CodeIcon className={styles.sourceLinkIcon} />
+      </a>
     </div>
   </article>
 );
@@ -43,6 +52,7 @@ ProjectCard.propTypes = {
       color: PropTypes.string.isRequired,
     })
   ).isRequired,
+  sourceLink: PropTypes.string.isRequired,
 };
 
 export default ProjectCard;

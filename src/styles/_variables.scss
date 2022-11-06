@@ -6,15 +6,17 @@ $padding--s: 1em;
 $padding--m: 2em;
 $padding--l: 3em;
 
+$gap--xs: 0.5rem;
 $gap--s: 1rem;
+$gap--s-m: 1.5rem;
 $gap--m: 2rem;
 $gap--l: 3rem;
 
 // Sizes
 
-$corner-radius--xs: 0.5rem;
-$corner-radius--s: 0.75rem;
-$corner-radius--m: 1rem;
+$corner-radius--xs: 3px;
+$corner-radius--s: 10px;
+$corner-radius--m: 16px;
 $card-width: 16rem;
 
 // Font
@@ -31,6 +33,7 @@ $f-size--heading-l: 2.5rem;
 
 // Other
 
-$shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+$shadow: 1px 2px 4px -2px rgb(0 0 0 / 10%);
+$border: 1px solid rgb(0 0 0 / 10%);
 $transition-duration--main: 0.2s;
 $transition-tfunc--main: ease;

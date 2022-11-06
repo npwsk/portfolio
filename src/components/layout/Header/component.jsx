@@ -7,12 +7,12 @@ import Logo from '@/components/Logo';
 import Menu from '@/components/Menu';
 import MobileMenu from '@/components/MobileMenu';
 import BurgerButton from '@/components/ui/Buttons/BurgerButton';
-import { navItems } from '@/constants';
+import { config } from '@/content/config';
 import classes from './styles.module.scss';
 
 const Header = () => {
   const { t } = useTranslation('translation', { keyPrefix: 'menu' });
-  const navItemsTranslated = navItems.map((item) => ({ ...item, text: t(item.key) }));
+  const navItemsTranslated = config.navItems.map((item) => ({ ...item, text: t(item.key) }));
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

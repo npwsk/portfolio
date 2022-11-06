@@ -1,9 +1,9 @@
 import React from 'react';
-import { Outlet, NavLink } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Wrapper from '@/components/ui/Wrapper';
 import ProjectCard from '@/components/ProjectCard';
-import { getProjects } from '@/constants';
+import { getProjects } from '@/utils/content';
 import styles from './styles.module.scss';
 
 const Projects = () => {
@@ -15,20 +15,15 @@ const Projects = () => {
       <ul className={styles.cardsGrid}>
         {projects.map((project) => (
           <li className={styles.gridCell} key={`${project.id}_li`}>
-            <NavLink
-              className={styles.link}
-              to={`/projects/${project.id}`}
-              key={`${project.id}_link`}
-            >
-              <ProjectCard
-                key={`${project.id}_card`}
-                id={project.id}
-                title={t(`${project.id}.name`)}
-                preview={project.preview}
-                description={t(`${project.id}.description`)}
-                stack={project.stack}
-              />
-            </NavLink>
+            <ProjectCard
+              key={`${project.id}_card`}
+              id={project.id}
+              title={t(`${project.id}.name`)}
+              preview={project.preview}
+              description={t(`${project.id}.description`)}
+              stack={project.stack}
+              sourceLink={project.source}
+            />
           </li>
         ))}
       </ul>

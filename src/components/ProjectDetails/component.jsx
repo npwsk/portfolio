@@ -49,7 +49,9 @@ const ProjectDetails = ({
         </a>
       </div>
 
-      <div className={classes.projectImage}>{image}</div>
+      <div className={classes.projectImgBox}>
+        <img className={classes.projectImg} src={image} alt={name} />
+      </div>
     </article>
   );
 };

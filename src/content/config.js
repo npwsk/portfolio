@@ -1,6 +1,7 @@
 import { ReactComponent as GithubIcon } from '@/assets/icons/outlined/github.svg';
 import { ReactComponent as TelegramIcon } from '@/assets/icons/outlined/telegram.svg';
 import { ReactComponent as MailIcon } from '@/assets/icons/outlined/mail.svg';
+import keyboard from '@/assets/images/keyboard.png';
 
 export const navItems = [
   { id: 'home_navlink', route: '/', text: 'Home', key: 'home' },
@@ -89,7 +90,7 @@ export const contacts = [
 const projects = [
   {
     id: 'inventory-accounting-system',
-    stack: ['react', 'redux', 'Express', 'MySQL', 'bootstrap'],
+    stack: ['react', 'redux', 'Express.js', 'MySQL', 'bootstrap'],
     source: 'https://github.com/npwsk/inventory-accounting-system',
     deploy: 'https://inv-accounting.herokuapp.com/',
     year: 2022,
@@ -103,20 +104,20 @@ const projects = [
     source: 'https://github.com/npwsk/virtual-keyboard',
     deploy: 'https://npwsk.github.io/virtual-keyboard/',
     year: 2022,
-    preview: null,
-    image: null,
+    preview: keyboard,
+    image: keyboard,
     features: ['languages'],
   },
-  {
-    id: 'onlineStore',
-    stack: ['typescript', 'html', 'sass'],
-    source: 'https://github.com/npwsk/online-store',
-    deploy: 'https://npwsk.github.io/virtual-keyboard/',
-    year: 2022,
-    preview: null,
-    image: null,
-    features: [],
-  },
+  // {
+  //   id: 'onlineStore',
+  //   stack: ['typescript', 'html', 'sass'],
+  //   source: 'https://github.com/npwsk/online-store',
+  //   deploy: 'https://npwsk.github.io/virtual-keyboard/',
+  //   year: 2022,
+  //   preview: null,
+  //   image: null,
+  //   features: [],
+  // },
   {
     id: 'ticTacToe',
     stack: ['javascript', 'html', 'css'],
@@ -139,26 +140,9 @@ const projects = [
   },
 ];
 
-const getDefaultSkill = (name) => ({
-  id: name,
-  name,
-  color: 'lightgray',
-  icon: null,
-});
-
-export const getProjects = () =>
-  projects.map((proj) => {
-    const stack = proj.stack.map(
-      (itemId) => skills.find((skill) => skill.id === itemId) ?? getDefaultSkill(itemId)
-    );
-    return { ...proj, stack };
-  });
-
-export const getProjectById = (id) => {
-  const foundProject = projects.find((project) => project.id === id);
-  if (!foundProject) return null;
-  const stack = foundProject.stack.map(
-    (itemId) => skills.find((skill) => skill.id === itemId) ?? getDefaultSkill(itemId)
-  );
-  return { ...foundProject, stack };
+export const config = {
+  navItems,
+  skills,
+  projects,
+  contacts,
 };
