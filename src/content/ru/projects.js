@@ -35,6 +35,19 @@ const projects = {
     description: 'Приложение для учета интерактивных досок в университете',
     features: {},
   },
+  portfolio: {
+    name: 'Портфолио',
+    description: 'Адаптивный лендинг с кастомизированным видео плеером',
+    features: {
+      lngToggle: 'Переключение языка',
+      theme: 'Темная/светлая тема',
+    },
+  },
+  shelter: {
+    name: 'Shelter',
+    description: 'Двустраничный сайт приюта для животных со слайдером и пагинацией',
+    features: {},
+  },
 };
 
 export default projects;

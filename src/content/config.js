@@ -1,7 +1,10 @@
 import { ReactComponent as GithubIcon } from '@/assets/icons/outlined/github.svg';
 import { ReactComponent as TelegramIcon } from '@/assets/icons/outlined/telegram.svg';
 import { ReactComponent as MailIcon } from '@/assets/icons/outlined/mail.svg';
-import keyboard from '@/assets/images/keyboard.png';
+import keyboard from '@/assets/images/keyboard.webp';
+import ticTacToe from '@/assets/images/tictactoe.webp';
+import shelter from '@/assets/images/shelter.webp';
+import portfolio from '@/assets/images/portfolio.webp';
 
 export const navItems = [
   { id: 'home_navlink', route: '/', text: 'Home', key: 'home' },
@@ -88,16 +91,16 @@ export const contacts = [
 ];
 
 const projects = [
-  {
-    id: 'inventory-accounting-system',
-    stack: ['react', 'redux', 'Express.js', 'MySQL', 'bootstrap'],
-    source: 'https://github.com/npwsk/inventory-accounting-system',
-    deploy: 'https://inv-accounting.herokuapp.com/',
-    year: 2022,
-    preview: null,
-    image: null,
-    features: [],
-  },
+  // {
+  //   id: 'inventory-accounting-system',
+  //   stack: ['react', 'redux', 'Express.js', 'MySQL', 'bootstrap'],
+  //   source: 'https://github.com/npwsk/inventory-accounting-system',
+  //   deploy: 'https://inv-accounting.herokuapp.com/',
+  //   year: 2022,
+  //   preview: null,
+  //   image: null,
+  //   features: [],
+  // },
   {
     id: 'virtualKeyboard',
     stack: ['javascript', 'html', 'sass'],
@@ -124,19 +127,39 @@ const projects = [
     source: 'https://github.com/npwsk/tic-tac-toe',
     deploy: 'https://npwsk.github.io/tic-tac-toe/',
     year: 2022,
-    preview: null,
-    image: null,
+    preview: ticTacToe,
+    image: ticTacToe,
     features: ['modes', 'scoreBoard'],
   },
+  // {
+  //   id: 'movieApp',
+  //   stack: ['javascript', 'html', 'css'],
+  //   source: 'https://github.com/npwsk/movie-app',
+  //   deploy: 'https://npwsk-movie-app.netlify.app/',
+  //   year: 2022,
+  //   preview: null,
+  //   image: null,
+  //   features: ['search', 'pagination'],
+  // },
   {
-    id: 'movieApp',
-    stack: ['javascript', 'html', 'css'],
-    source: 'https://github.com/npwsk/movie-app',
-    deploy: 'https://npwsk-movie-app.netlify.app/',
+    id: 'shelter',
+    stack: ['javascript', 'html', 'sass'],
+    source: 'https://github.com/npwsk/shelter',
+    deploy: 'https://npwsk.github.io/shelter/main/',
     year: 2022,
-    preview: null,
-    image: null,
-    features: ['search', 'pagination'],
+    preview: shelter,
+    image: shelter,
+    features: [],
+  },
+  {
+    id: 'portfolio',
+    stack: ['javascript', 'html', 'sass'],
+    source: 'https://github.com/npwsk/portfolio-landing',
+    deploy: 'https://npwsk.github.io/portfolio-landing/portfolio/',
+    year: 2022,
+    preview: portfolio,
+    image: portfolio,
+    features: [],
   },
 ];
 
