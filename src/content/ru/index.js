@@ -9,6 +9,7 @@ const ru = {
     about,
     contacts,
     projects,
+    title: 'Ника Перфилова | Frontend разработчик',
   },
 };
 

@@ -9,6 +9,7 @@ const en = {
     about,
     contacts,
     projects,
+    title: 'Nika Perfilova | Frontend developer',
   },
 };
 
