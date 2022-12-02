@@ -16,14 +16,10 @@ const Project = () => {
       <NavLink to="/projects">{t('toProjects')}</NavLink>
 
       <ProjectDetails
+        {...project}
         id={params.projectId}
         name={t(`${project.id}.name`)}
         description={t(`${project.id}.description`)}
-        year={project.year}
-        stack={project.stack}
-        sourceUrl={project.source}
-        deployUrl={project.deploy}
-        image={project.image}
         features={project.features.map((feat) => t(`${project.id}.features.${feat}`))}
       />
     </Wrapper>

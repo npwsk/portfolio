@@ -35,3 +35,5 @@ rules:
     - namedComponents: arrow-function
       unnamedComponents: arrow-function
   react/require-default-props: 0
+  react/prop-types: 0
+  react/jsx-props-no-spreading: 0

@@ -1,10 +1,14 @@
 import { ReactComponent as GithubIcon } from '@/assets/icons/outlined/github.svg';
 import { ReactComponent as TelegramIcon } from '@/assets/icons/outlined/telegram.svg';
 import { ReactComponent as MailIcon } from '@/assets/icons/outlined/mail.svg';
-import keyboard from '@/assets/images/keyboard.webp';
-import ticTacToe from '@/assets/images/tictactoe.webp';
-import shelter from '@/assets/images/shelter.webp';
-import portfolio from '@/assets/images/portfolio.webp';
+import keyboardImage from '@/assets/images/keyboard.jpg';
+import keyboardImageMobile from '@/assets/images/keyboard-x2.jpg';
+import ticTacToeImage from '@/assets/images/tictactoe.jpg';
+import ticTacToeImageMobile from '@/assets/images/tictactoe-x2.jpg';
+import shelterImage from '@/assets/images/shelter.jpg';
+import shelterImageMobile from '@/assets/images/shelter-x2.jpg';
+import portfolioImage from '@/assets/images/portfolio.jpg';
+import portfolioImageMobile from '@/assets/images/portfolio-x2.jpg';
 
 export const navItems = [
   { id: 'home_navlink', route: '/', text: 'Home', key: 'home' },
@@ -107,8 +111,9 @@ const projects = [
     source: 'https://github.com/npwsk/virtual-keyboard',
     deploy: 'https://npwsk.github.io/virtual-keyboard/',
     year: 2022,
-    preview: keyboard,
-    image: keyboard,
+    preview: keyboardImage,
+    previewMobile: keyboardImageMobile,
+    image: keyboardImage,
     features: ['languages'],
   },
   // {
@@ -127,8 +132,9 @@ const projects = [
     source: 'https://github.com/npwsk/tic-tac-toe',
     deploy: 'https://npwsk.github.io/tic-tac-toe/',
     year: 2022,
-    preview: ticTacToe,
-    image: ticTacToe,
+    preview: ticTacToeImage,
+    previewMobile: ticTacToeImageMobile,
+    image: ticTacToeImage,
     features: ['modes', 'scoreBoard'],
   },
   // {
@@ -147,8 +153,9 @@ const projects = [
     source: 'https://github.com/npwsk/shelter',
     deploy: 'https://npwsk.github.io/shelter/main/',
     year: 2022,
-    preview: shelter,
-    image: shelter,
+    preview: shelterImage,
+    previewMobile: shelterImageMobile,
+    image: shelterImage,
     features: [],
   },
   {
@@ -157,8 +164,9 @@ const projects = [
     source: 'https://github.com/npwsk/portfolio-landing',
     deploy: 'https://npwsk.github.io/portfolio-landing/portfolio/',
     year: 2022,
-    preview: portfolio,
-    image: portfolio,
+    preview: portfolioImage,
+    previewMobile: portfolioImageMobile,
+    image: portfolioImage,
     features: [],
   },
 ];

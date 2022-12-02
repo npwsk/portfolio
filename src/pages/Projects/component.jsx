@@ -16,13 +16,10 @@ const Projects = () => {
         {projects.map((project) => (
           <li className={styles.gridCell} key={`${project.id}_li`}>
             <ProjectCard
-              key={`${project.id}_card`}
-              id={project.id}
+              {...project}
+              key={project.id}
               title={t(`${project.id}.name`)}
-              preview={project.preview}
               description={t(`${project.id}.description`)}
-              stack={project.stack}
-              sourceLink={project.source}
             />
           </li>
         ))}
