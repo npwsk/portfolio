@@ -2,7 +2,7 @@ const about = {
   firstName: 'Nika',
   lastName: 'Perfilova',
   job: 'Frontend Developer',
-  hello: "Hello, I'm Nika",
+  hello: 'Hello, my name is',
   intro: `Developing user interfaces is my passion. \
   I am currently learning and hope to be able to create good looking, \
   user-friendly and fast interfaces soon. I am also a 3rd year student \

@@ -8,8 +8,11 @@ const Home = () => {
 
   return (
     <Wrapper className={styles.wrapper}>
-      <p>{t('about.hello')}</p>
-      <p>{t('about.intro')}</p>
+      <p className={styles.greetingBox}>
+        <span className={styles.greeting}>{t('about.hello')}</span>
+        <span className={styles.name}>{t('about.firstName')}</span>
+      </p>
+      <p className={styles.intro}>{t('about.intro')}</p>
     </Wrapper>
   );
 };
