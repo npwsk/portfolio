@@ -8,6 +8,7 @@ const about = {
   user-friendly and fast interfaces soon. I am also a 3rd year student \
   studying applied computer science. My goal is to start a career as a \
   Front-End developer.`,
+  downloadAlt: 'Download cv',
   download: 'Download cv',
 };
 

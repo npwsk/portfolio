@@ -1,0 +1,23 @@
+@use "@/styles/colors" as *;
+@use "@/styles/variables" as *;
+
+.button {
+  display: inline-flex;
+  padding: $padding--xs $padding--s;
+  font-size: $f-size--m;
+  color: $color-main;
+  text-decoration: none;
+  background: none;
+  border-radius: $corner-radius--s-xs;
+
+  &.outlined {
+    font-weight: 500;
+    border: 1px solid $color-border;
+  }
+
+  &.filled {
+    font-weight: 600;
+    color: $color-accent-400;
+    background-color: $color-accent-100;
+  }
+}
