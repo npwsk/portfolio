@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { NavLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import cn from 'classnames';
 import classes from './styles.module.scss';
 
 const Menu = ({ items }) => (
@@ -12,7 +11,7 @@ const Menu = ({ items }) => (
           <NavLink
             to={item.route}
             key={item.id}
-            className={({ isActive }) => classNames(classes.link, { [classes.isActive]: isActive })}
+            className={({ isActive }) => cn(classes.link, { [classes.isActive]: isActive })}
           >
             {item.text}
           </NavLink>
@@ -21,15 +20,5 @@ const Menu = ({ items }) => (
     </ul>
   </nav>
 );
-
-Menu.protoTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.exact({
-      id: PropTypes.string,
-      route: PropTypes.string,
-      text: PropTypes.string,
-    })
-  ).isRequired,
-};
 
 export default Menu;

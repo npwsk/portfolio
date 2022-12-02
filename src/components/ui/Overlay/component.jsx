@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classes from './styles.module.scss';
 
-const Overlay = ({ isVisible, onClick }) => {
-  const overlayClasses = classNames(classes.overlay, { [classes.isVisible]: isVisible });
+const Overlay = ({ isVisible, onClick, className }) => {
+  const overlayClasses = classNames(classes.overlay, {
+    [classes.isVisible]: isVisible,
+    [className]: !!className,
+  });
 
   return (
     <div className={overlayClasses} onClick={onClick} onKeyDown={onClick} role="presentation" />

@@ -6,9 +6,11 @@
   padding: $padding--xs $padding--s;
   font-size: $f-size--m;
   color: $color-main;
+  text-align: center;
   text-decoration: none;
   background: none;
   border-radius: $corner-radius--s-xs;
+  white-space: nowrap;
 
   &.outlined {
     font-weight: 500;

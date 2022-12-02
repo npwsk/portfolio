@@ -1,3 +1,4 @@
+@use "@/styles/variables" as *;
 @use "@/styles/mixins" as *;
 @use "@/styles/z-index" as *;
 
@@ -9,12 +10,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: $gap--m;
 }
 
 .menu {
-  margin-right: auto;
-  margin-left: auto;
-
   @include for-tablet-down {
     display: none;
   }
@@ -46,6 +45,18 @@
   right: 0;
   z-index: $z-index-burger;
 
+  @include for-desktop-up {
+    display: none;
+  }
+}
+
+.cvButton {
+  @include for-tablet-down {
+    display: none;
+  }
+}
+
+.overlay {
   @include for-desktop-up {
     display: none;
   }

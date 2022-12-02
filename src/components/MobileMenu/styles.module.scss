@@ -1,11 +1,14 @@
 @use "@/styles/colors" as *;
+@use "@/styles/variables" as *;
 
 .mobileMenu {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
+  gap: $gap--l;
   padding: 2rem;
   overflow: auto;
   background-color: $color-main-bg;

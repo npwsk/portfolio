@@ -2,8 +2,9 @@ import React from 'react';
 import cn from 'classnames';
 import styles from './styles.module.scss';
 
-const Button = ({ type, variant = 'filled', children, ...props }) => {
+const Button = ({ type, variant = 'filled', children, className, ...props }) => {
   const classes = cn({
+    [className]: !!className,
     [styles.button]: true,
     [styles.outlined]: variant === 'outlined',
     [styles.filled]: variant === 'filled',
@@ -25,6 +26,5 @@ const Button = ({ type, variant = 'filled', children, ...props }) => {
       {children}
     </button>
   );
-  /* eslint-enable react/button-has-type */
 };
 export default Button;

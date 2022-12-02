@@ -1,6 +1,8 @@
 @use "@/styles/colors" as *;
 
 .menu {
+  display: flex;
+  justify-content: space-between;
 }
 
 .list {
@@ -12,22 +14,17 @@
 }
 
 .listItem {
+  display: flex;
+  align-items: center;
 }
 
 .link {
+  vertical-align: middle;
   text-decoration: none;
   font-weight: 500;
   color: $color-main--inactive;
 
   &.isActive {
     color: $color-main;
-    // font-weight: 500;
-    // &::after {
-    //   content: "";
-    //   display: block;
-    //   height: 0.25em;
-    //   width: 75%;
-    //   background-color: $color-accent-1;
-    // }
   }
 }

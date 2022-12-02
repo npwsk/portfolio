@@ -1,9 +1,9 @@
 @use "@/styles/colors" as *;
 
 .link {
-  text-decoration: none;
   color: $color-main;
-
+  text-decoration: none;
+  white-space: nowrap;
   letter-spacing: -1px;
 }
 
