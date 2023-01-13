@@ -27,6 +27,12 @@
   }
 }
 
+@mixin hover-supported {
+  @media not all and (hover: none) {
+    @content;
+  }
+}
+
 // Transition
 
 @mixin transition-main($properies: all) {

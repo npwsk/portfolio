@@ -1,4 +1,5 @@
 @use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
 @use "@/styles/colors" as *;
 
 .wrapper {
@@ -13,7 +14,6 @@
   display: inline-flex;
   flex-direction: column;
   align-self: flex-start;
-  margin-bottom: $gap--m;
 }
 
 .greeting {
@@ -28,4 +28,46 @@
 .name {
   font-weight: 700;
   font-size: $f-size--xl;
+}
+
+.intro {
+  margin: 0;
+}
+
+.heading2 {
+  margin: 0;
+  font-size: $f-size--heading-s;
+}
+
+.projectsSection {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: $gap--s;
+  width: 100%;
+  margin-top: $gap--m;
+
+  @include for-tablet-down {
+    grid-template-columns: 1fr;
+  }
+}
+
+.projectsCarousel {
+  grid-column: 1 / -1;
+
+  @include for-tablet-down {
+    grid-row: 2 / span 1;
+  }
+}
+
+.allProjectsLink {
+  text-decoration: none;
+  color: $color-accent-500;
+  font-size: $f-size--m;
+
+  @include transition-main(color);
+
+  &:hover {
+    color: $color-accent-700;
+  }
 }
