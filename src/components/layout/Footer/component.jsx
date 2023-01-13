@@ -12,7 +12,7 @@ const Footer = () => {
         <div className={classes.content}>
           <ContactsList iconsOnly layout="row" iconSize="m" />
           <span className={classes.copy}>
-            &copy; 2022 {t('about.firstName')} {t('about.lastName')}
+            &copy; 2022 - 2023 {t('about.firstName')} {t('about.lastName')}
           </span>
         </div>
       </Wrapper>

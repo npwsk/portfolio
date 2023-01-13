@@ -1,6 +1,7 @@
 import { ReactComponent as GithubIcon } from '@/assets/icons/outlined/github.svg';
 import { ReactComponent as TelegramIcon } from '@/assets/icons/outlined/telegram.svg';
 import { ReactComponent as MailIcon } from '@/assets/icons/outlined/mail.svg';
+import { ReactComponent as CodepenIcon } from '@/assets/icons/codepen.svg';
 import keyboardImage from '@/assets/images/keyboard.jpg';
 import keyboardImageMobile from '@/assets/images/keyboard-x2.jpg';
 import ticTacToeImage from '@/assets/images/tictactoe.jpg';
@@ -92,6 +93,13 @@ export const contacts = [
     url: 'https://github.com/npwsk',
     icon: GithubIcon,
   },
+  {
+    id: 'codepen',
+    title: 'Codepen',
+    text: 'npwsk',
+    url: 'https://codepen.io/npwsk',
+    icon: CodepenIcon,
+  },
 ];
 
 const projects = [
@@ -116,16 +124,6 @@ const projects = [
     image: keyboardImage,
     features: ['languages'],
   },
-  // {
-  //   id: 'onlineStore',
-  //   stack: ['typescript', 'html', 'sass'],
-  //   source: 'https://github.com/npwsk/online-store',
-  //   deploy: 'https://npwsk.github.io/virtual-keyboard/',
-  //   year: 2022,
-  //   preview: null,
-  //   image: null,
-  //   features: [],
-  // },
   {
     id: 'ticTacToe',
     stack: ['javascript', 'html', 'css'],
@@ -137,16 +135,6 @@ const projects = [
     image: ticTacToeImage,
     features: ['modes', 'scoreBoard'],
   },
-  // {
-  //   id: 'movieApp',
-  //   stack: ['javascript', 'html', 'css'],
-  //   source: 'https://github.com/npwsk/movie-app',
-  //   deploy: 'https://npwsk-movie-app.netlify.app/',
-  //   year: 2022,
-  //   preview: null,
-  //   image: null,
-  //   features: ['search', 'pagination'],
-  // },
   {
     id: 'shelter',
     stack: ['javascript', 'html', 'sass'],

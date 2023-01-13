@@ -54,7 +54,10 @@
 }
 
 .icon {
-  fill: $color-main;
+  &[fill],
+  [fill] {
+    fill: $color-main;
+  }
   width: 1rem;
   height: 1rem;
 }
